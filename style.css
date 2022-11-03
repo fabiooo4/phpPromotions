@@ -30,6 +30,16 @@
     text-align: center;
 }
 
+.flexRow {
+    display: flex;
+    flex-direction: row;
+}
+
+.checkbox {
+    margin-bottom: 20;
+    margin-left: 10;
+}
+
 .button {
     border-radius: 10px;
     border-color: #bf360c;

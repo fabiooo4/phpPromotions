@@ -6,16 +6,28 @@
   </head>
     
       <body class="mainBg">
-        <h1>Equazione di secondo grado</h1>
-        <form action="result.php" method="post">
-          <label for="a">a</label>
-          <input class="input" type="number" id="inputA" name="a" value="0"><br><br>
-          <label for="b">b</label>
-          <input class="input" type="number" id="inputB" name="b" value="0"><br><br>
-          <label for="c">c</label>
-          <input class="input" type="number" id="inputC" name="c" value="0"><br><br>
+        <h1>Promosso??</h1>
+        <?php
+          // Get the values from the form
+          $nominativo = $_POST['nominativo'];
+          $nominativo = ucfirst($nominativo);
 
-          <button class="button" type="submit">Calcola</button>
+          if ($_POST['genere'] == "M") {
+            echo "$nominativo sei stato promosso con debito in ";
+          } else {
+            echo "$nominativo sei stata promossa con debito in ";
+          }
+
+          if (!empty($_POST["debiti"])) {
+            foreach ($_POST["debiti"] as $debito) {
+              echo "$debito, ";
+            }
+          }
+
+          echo "MEGA BRAVO"
+        ?>
+        <form action="student.php">
+          <button class="button" type="submit">Indietro</button>
         </form>
       </body>
 </div>
